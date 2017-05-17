@@ -12,7 +12,9 @@ def inicio(request):
 		abc= form_data.get("usuario")
 		abc2= form_data.get("nombreapp")
 		abc3= form_data.get("descripcion")
-		obj= clients.objects.create(usuario=abc, nombreapp=abc2,descripcion=abc3)
+		abc4= form_data.get("ip")
+		abc5= form_data.get("puerto")
+		obj= clients.objects.create(usuario=abc, nombreapp=abc2,descripcion=abc3,puerto=abc5,ip=abc4)
 	context = {
 	    "temp_titulo":titulo,
 		"el_form":form,
