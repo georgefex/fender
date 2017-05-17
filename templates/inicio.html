@@ -1,0 +1,11 @@
+{{temp_titulo}}
+<hr/>
+<br/>
+
+<form method="POST" action="">{% csrf_token %}
+{{ el_form.as_p }}
+<br/>
+<br/>
+<input type='submit' value='Agregar'>
+</form> 
+<hr/>
