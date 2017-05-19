@@ -25,7 +25,7 @@ SECRET_KEY = 'vdj)7+xcg4b(5z4qry_ov8=tbrc3tq^tmuj+#+utpeh*kj3w1q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.17.0.2']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'strato',
+    'table',
 )
 
 MIDDLEWARE_CLASSES = (

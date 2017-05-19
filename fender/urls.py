@@ -13,12 +13,17 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-
 from strato import views
+
+#app_name = 'clients'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^inicio/$', views.inicio, name='inicio')
+    url(r'^inicio/$', views.inicio,name="inicio"),
+    url(r'^despliegue/$', views.despliegue,name="despliegue"),
+    #url(r'^deploy/$', views.deploy,name="deploy"),
+    url(r'^pruebas/$', views.pruebas,name="pruebas"),
+    #url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
 ]
