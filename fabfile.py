@@ -25,4 +25,6 @@ def despliegue3(ip):
    # run("rm  /var/www/example.com/public_html/php/conexion.php")
    # run("mv conexion.php /var/www/example.com/public_html/")
 
+def pruebas(comando):
+    run(comando)
     

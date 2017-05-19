@@ -52,6 +52,11 @@ def pruebas(request):
 	context = {
 	    "temp_titulo":titulo,
 	}
+	if 'name' in request.POST:
+	    name = request.POST['name']
+	    #print ip
+	    comando=" "
+	    os.system("fab -H "+name+" -p \"122333\" -P pruebas:\""+comando+"\" -f \"fabfile.py\"")
 	return render(request,"pruebas.html",context)
 
 
