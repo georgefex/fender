@@ -41,7 +41,7 @@ def despliegue(request):
 	    time.sleep(0.1)
 	    os.system("fab -H "+ip+" -p \"122333\" -P despliegue2 -f \"fabfile.py\"")
 	    time.sleep(0.1)
-	    os.system("fab -H "+ip+" -p \"122333\" -P despliegue3 -f \"fabfile.py\"")
+	    os.system("fab -H "+ip+" -p \"122333\" -P despliegue3:\""+ip+"\" -f \"fabfile.py\"")
 	else:
 	    name = False
 	return render(request,"despliegue.html",context)
